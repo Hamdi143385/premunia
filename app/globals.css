@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Couleurs Premunia basées sur le logo */
+  --premunia-orange: #ffa500;
+  --premunia-red: #ff4444;
+  --premunia-pink: #e91e63;
+  --premunia-purple: #9c27b0;
+  --premunia-gradient: linear-gradient(135deg, #ffa500 0%, #ff4444 25%, #e91e63 75%, #9c27b0 100%);
+
+  /* Couleurs principales */
+  --premunia-primary: #e91e63;
+  --premunia-secondary: #9c27b0;
+  --premunia-accent: #ffa500;
+  --premunia-dark: #1a202c;
+  --premunia-gray: #4a5568;
+  --premunia-lightgray: #e2e8f0;
+}
+
+.premunia-gradient {
+  background: var(--premunia-gradient);
+}
+
+.premunia-text-gradient {
+  background: var(--premunia-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.premunia-primary {
+  color: var(--premunia-primary);
+}
+.bg-premunia-primary {
+  background-color: var(--premunia-primary);
+}
+
+.premunia-secondary {
+  color: var(--premunia-secondary);
+}
+.bg-premunia-secondary {
+  background-color: var(--premunia-secondary);
+}
+
+.premunia-accent {
+  color: var(--premunia-accent);
+}
+.bg-premunia-accent {
+  background-color: var(--premunia-accent);
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 39 100% 50%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 340 82% 52%;
+    --chart-1: 39 100% 50%;
+    --chart-2: 340 82% 52%;
+    --chart-3: 291 64% 42%;
+    --chart-4: 0 100% 63%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 340 82% 52%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 340 82% 95%;
+    --sidebar-accent-foreground: 340 82% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 340 82% 52%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 39 100% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 340 82% 52%;
+    --chart-1: 39 100% 50%;
+    --chart-2: 340 82% 52%;
+    --chart-3: 291 64% 42%;
+    --chart-4: 0 100% 63%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 340 82% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 340 82% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
